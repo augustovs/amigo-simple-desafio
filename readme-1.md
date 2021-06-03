@@ -111,8 +111,7 @@
 ```
 
 # Regras gerais
-- Deverá submitar um Pull Request com os arquivos aqui neste repositório
-- Utilizar bootstrap para gerar melhor o visual do layout (é opcional, mas será bonus pra quem fizer)
+- Utilizar bootstrap para gerar melhor o visual do layout (opcional)
 - Convênios que estão com *is_deleted* deverão vir com o texto riscado e ao passar o mouse em cima com o título: Convênio Apagado
 - Pacientes que não possuírem foto devem ser colocados a imagem default: https://via.placeholder.com/150x150.jpg
 - Data e preço (valor) deverão vir formatados 
