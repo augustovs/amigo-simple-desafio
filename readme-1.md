@@ -112,12 +112,12 @@
 
 # Regras gerais
 - Utilizar bootstrap para gerar melhor o visual do layout (opcional)
-- Convênios que estão com *is_deleted* deverão vir com o texto riscado e ao passar o mouse em cima com o título: Convênio Apagado
-- Pacientes que não possuírem foto devem ser colocados a imagem default: https://via.placeholder.com/150x150.jpg
-- Data e preço (valor) deverão vir formatados 
-- Quando a pesquisa não retornar valor deverá aparecer apenas a linha que a imagem mostra com a mensagem: Nenhuma guia encontrada
-- Pesquisa no campo de texto deve pesquisar por: Nome do paciente e número da guia
-- Select de convênios deve ser feito para filtrar as guias pelo convênio selecionado
+- Convênios que estão com *is_deleted: true* deverão apresentar o texto riscado e ao passar o mouse em cima mostrar o título: Convênio Apagado
+- Pacientes que não possuírem foto (thumb_url) devem ser apresentados com a imagem padrão: https://via.placeholder.com/150x150.jpg
+- Data e preço (valor) deverão vir formatados (DIA/MES/ANO) e (R$)
+- Ao realizar um filtro, quando a pesquisa não retornar valor deverá aparecer apenas a linha que a imagem mostra com a mensagem: Nenhuma guia encontrada
+- Pesquisa no campo de texto deve pesquisar por: Nome do paciente (patient -> name) e número da guia (number)
+- Select de convênios (insurances) deve ser feito para filtrar as guias pelo convênio selecionado
 
 
 ![alt text](https://i.ibb.co/8MFKF3V/Screen-Shot-2021-04-23-at-16-39-24.png)
