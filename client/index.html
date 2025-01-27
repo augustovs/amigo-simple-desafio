@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios JavaScript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/lint.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/show-hint.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .CodeMirror {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        pre {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafios JavaScript</h1>
+    
+    <!-- Desafio 1 -->
+    <h2>Desafio 1</h2>
+    
+    <!-- Exercício 1 -->
+    <h3>Exercício 1</h3>
+    <p>Dado array abaixo, monte um novo array com apenas números (inteiros e decimais) seguindo as regras:</p>
+    <ul>
+        <li>Cada valor do novo array deve ser somado com o número anterior</li>
+        <li>Se o novo valor não for par, deverá ser inserido um novo número anterior a ele somando + 0.5</li>
+    </ul>
+    <pre>const arrayNumeros = [0, '1', '1.5', 2, 3, 4, 5, 6, 7, '8', 9];</pre>
+    <textarea id="codigo1" rows="10" cols="50" placeholder="Cole o código aqui...">
+const arrayNumeros = [0, '1', '1.5', 2, 3, 4, 5, 6, 7, '8', 9];
+
+function main(arr) {
+    const resultado = [];
+
+    // seu código
+
+    return resultado;
+}
+
+main(arrayNumeros)
+    </textarea>
+    <button onclick="executarCodigo1()">Executar Exercício 1</button>
+    <pre id="resultado1"></pre>
+    
+    <!-- Exercício 2 -->
+    <h3>Exercício 2</h3>
+    <p>Utilize o <code>forEach</code> e o <code>filter</code> para gerar um novo array *filtrando* apenas os números pares.</p>
+    <ul>
+        <li>Realize com o forEach</li>
+        <li>Realize com o filter</li>
+    </ul>
+    <pre>const arrayNumeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];</pre>
+    <textarea id="codigo2ForEach" rows="10" cols="50" placeholder="Cole o código aqui...">
+const arrayNumeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+function main(arr) {
+    const resultado = [];
+
+    // seu código
+
+    return resultado;
+}
+
+main(arrayNumeros)
+</textarea>
+    <button onclick="executarCodigo2ForEach()">Executar Exercício 2 com forEach</button>
+    <pre id="resultado2ForEach"></pre>
+    <textarea id="codigo2Filter" rows="10" cols="50" placeholder="Cole o código aqui...">
+const arrayNumeros = [0, '1', '1.5', 2, 3, 4, 5, 6, 7, '8', 9];
+
+function main(arr) {
+    const resultado = [];
+
+    // seu código
+
+    return resultado;
+}
+
+main(arrayNumeros)
+</textarea>
+    <button onclick="executarCodigo2Filter()">Executar Exercício 2 com filter</button>
+    <pre id="resultado2Filter"></pre>
+    
+    <!-- Exercício 3 -->
+    <h3>Exercício 3</h3>
+    <p>Retorne a data abaixo (no formato ISO) nos seguintes padrões:</p>
+    <ul>
+        <li>DIA/MÊS/ANO</li>
+        <li>DIA/MÊS/ANO HORA:MINUTO</li>
+    </ul>
+    <pre>const date = '2022-06-07T01:01:06.336Z';</pre>
+    <textarea id="codigo3" rows="10" cols="50" placeholder="Cole o código aqui...">
+const date = '2022-06-07T01:01:06.336Z';
+
+function formatarData(date) {
+    const data = new Date(date);
+
+    // seu código
+
+    const formato1 = `${dia}/${mes}/${ano}`;
+    const formato2 = `${dia}/${mes}/${ano} ${hora}:${minuto}`;
+
+    return [formato1, formato2]
+}
+
+formatarData(date);
+</textarea>
+    <button onclick="executarCodigo3()">Executar Exercício 3</button>
+    <pre id="resultado3"></pre>
+    
+    <!-- Exercício 4 -->
+    <h3>Exercício 4</h3>
+    <p>Crie uma função que retorna o mês por extenso de uma data qualquer passada por parâmetro, exemplo:</p>
+    <pre>
+const dataAtual = new Date(); // 2022-06-07T01:01:06.336Z
+const mesExtenso = retornaMesPorExtenso(dataAtual);
+console.log(mesExtenso); // Junho
+    </pre>
+    <textarea id="codigo4" rows="10" cols="50" placeholder="Cole o código aqui...">
+function retornaMesPorExtenso(data) {
+    const meses = [
+        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    ];
+    
+    let mes = "";
+
+    // seu código
+    
+    return mes;
+}
+
+const dataAtual = new Date('2022-06-07T01:01:06.336Z');
+retornaMesPorExtenso(dataAtual);
+
+</textarea>
+    <button onclick="executarCodigo4()">Executar Exercício 4</button>
+    <pre id="resultado4"></pre>
+    
+    <!-- Exercício 5 -->
+    <h3>Exercício 5</h3>
+    <p>Crie uma função que retorne a data passada formatada de acordo com os patterns abaixo:</p>
+    <ul>
+        <li>DIA (DD)</li>
+        <li>DIA/MES (DD/MM)</li>
+        <li>DIA/MES/ANO (DD/MM/YYYY)</li>
+    </ul>
+    <pre>
+const dataFormatada = formatarData(new Date(), 'DD/MM/YYYY'); // 2022-06-07T01:01:06.336Z
+console.log(dataFormatada); // resultado: 07/06/2022
+    </pre>
+    <textarea id="codigo5" rows="10" cols="50" placeholder="Cole o código aqui...">
+function formatarData(data) {
+
+    return [formato1, formato2, formato3];
+}
+
+const data = new Date('2022-06-07T01:01:06.336Z');
+formatarData(data);
+</textarea>
+    <button onclick="executarCodigo5()">Executar Exercício 5</button>
+    <pre id="resultado5"></pre>
+    
+    <!-- Exercício 6 -->
+    <h3>Exercício 6</h3>
+    <p>Monte uma função que retorna HTML dinâmico que serão os elementos utilizados para uma paginação. Siga as regras:</p>
+    <ul>
+        <li>A função receberá dois parâmetros: total geral de itens e items por página</li>
+        <li>O total geral de itens são 15</li>
+        <li>Você só pode exibir 2 itens por página</li>
+        <li>O número da página deve vir acompanhado do código dado como exemplo: Página 1/Página 2/Página 3, etc...</li>
+    </ul>
+    <pre>
+<li>Página 1</li>
+<li>Página 2</li>
+<li>Página 3</li>
+<li>Página 4</li>
+...
+    </pre>
+    <textarea id="codigo6" rows="10" cols="50" placeholder="Cole o código aqui...">
+function gerarPaginacao(totalItens, itensPorPagina) {
+    const totalPaginas = // seu código
+    let html = '';
+
+    // seu código
+    
+    document.getElementById('resultado6').innerHTML = html;
+    return html;
+}
+
+const totalItens = 15;
+const itensPorPagina = 2;
+gerarPaginacao(totalItens, itensPorPagina);   
+</textarea>
+    <button onclick="executarCodigo6()">Executar Exercício 6</button>
+    <pre id="resultado6"></pre>
+    
+    <!-- Exercício 7 -->
+    <h3>Exercício 7</h3>
+    <p>Junte os três arrays em um só e retorne um novo sem números duplicados:</p>
+    <pre>
+const array1 = [0, 1, 2, 3, 4, 5, 6, 70, 8, 9];
+const array2 = [0, 100, 200, 300, 4, 500, 6, 70, 88, 9];
+const array3 = [0, 1, 2, 88, 9, 88, 5, 8, 0, 200, 100];
+    </pre>
+    <textarea id="codigo7" rows="10" cols="50" placeholder="Cole o código aqui...">
+const array1 = [0, 1, 2, 3, 4, 5, 6, 70, 8, 9];
+const array2 = [0, 100, 200, 300, 4, 500, 6, 70, 88, 9];
+const array3 = [0, 1, 2, 88, 9, 88, 5, 8, 0, 200, 100];
+
+function juntarArrays(arr1, arr2, arr3) {
+    let resultado = [];
+    
+    return resultado;
+}
+
+juntarArrays(array1, array2, array3);
+</textarea>
+    <button onclick="executarCodigo7()">Executar Exercício 7</button>
+    <pre id="resultado7"></pre>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/javascript-lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.13.4/jshint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/show-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/javascript-hint.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
